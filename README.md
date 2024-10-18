@@ -189,5 +189,58 @@ fun PockPhotoCard(pockemon: PockemonsItem, modifier: Modifier = Modifier) {
         )
     }
 }
+step
+
+Prepare the Composable PokApp that contain the main composable of the app
+
+@Composable
+fun PokApp() {
+    val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior()
+    Scaffold(
+        modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection),
+        topBar = { PokTopAppBar(scrollBehavior = scrollBehavior) }
+    ) {
+        Surface(
+            modifier = Modifier.fillMaxSize()
+        ) {
+            val pokViewModel: PokViewModel = viewModel()
+            HomeScreen(
+                pokUiState = pokViewModel.pockUiState,
+                contentPadding = it
+            )
+        }
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun PokTopAppBar(scrollBehavior: TopAppBarScrollBehavior, modifier: Modifier = Modifier) {
+    CenterAlignedTopAppBar(
+        scrollBehavior = scrollBehavior,
+        title = {
+            Text(
+                text = stringResource(R.string.app_name),
+                style = MaterialTheme.typography.headlineSmall,
+            )
+        },
+        modifier = modifier
+    )
+}
+
+step
+
+call your Pokapp in your main activity
 
 
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContent {
+            RetrofitGet1Theme {
+                    PokApp()
+                
+            }
+        }
+    }
+}
