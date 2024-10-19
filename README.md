@@ -22,10 +22,10 @@ implementation("io.coil-kt:coil-compose:2.4.0")
 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
 ```
 
-# Step2 
+# Step 2 
 Add a package named model under your main package, in this create a model named Pockemon.kt using POJO Pluguin (install it if it is not installed)
 
-# Step3
+# Step 3
 Create a package named network in your main package
 in this package create an interface named ApiService containing the access to api
 ```kotlin
@@ -52,7 +52,7 @@ object PockApi {
     }}
 ```
 
-# step3
+# step 4
 
 create a package named viewmodel in witch create a file named ViewModel.kt
 declare Sealed Class PockUiState
@@ -95,7 +95,7 @@ class ViewModel:ViewModel() {
 }
 ```
 
-# Step 4 
+# Step 5 
 
 create package view, in witch create Home Screens Composable that use viewmodel to display the list of pokemons , error if error and loading if loading
 ```kotlin
@@ -196,7 +196,7 @@ fun PockPhotoCard(pockemon: PockemonsItem, modifier: Modifier = Modifier) {
 }
 ```
 
-# step
+# step 6
 Prepare the Composable PokApp that contain the main composable of the app
 ```kotlin
 @Composable
@@ -234,7 +234,7 @@ fun PokTopAppBar(scrollBehavior: TopAppBarScrollBehavior, modifier: Modifier = M
 }
 ```
 
-# Step
+# Step 7
 call your Pokapp in your main activity
 
 ```kotlin
