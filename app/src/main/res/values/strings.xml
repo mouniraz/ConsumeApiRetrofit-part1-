@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RetrofitGet1</string>
+    <string name="loading_failed">Loading Data Failed\n</string>
+    <string name="retry">Retry</string>
+    <string name="loading">Loading</string>
+    <string name="pockphoto">pockemon</string>
+</resources>
