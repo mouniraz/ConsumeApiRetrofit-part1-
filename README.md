@@ -5,22 +5,24 @@ https://tyradex.tech/api/v1/pokemon
 
 acceede to this api from navigator or Postman and extract model of this API
 
-Step 1 
+# Step 1 
 Create Jetpack Android Project
 
 Add Retrofit and Gson dependency to your gradle
+```kotlin
+
 // Retrofit
-'''kotlin
 implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:1.0.0")
 implementation("com.squareup.retrofit2:retrofit:2.9.0")
 implementation ("com.google.code.gson:gson:2.11.0")
-'''kotlin
+```kotlin
 Add coil and serialization dependency
-
+```kotlin
 // Coil
 implementation("io.coil-kt:coil-compose:2.4.0")
 //Serialization
 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
+```kotlin
 
 Step2 
 Add a package named model under your main package, in this create a model named Pockemon.kt using POJO Pluguin (install it if it is not installed)
@@ -28,26 +30,31 @@ Add a package named model under your main package, in this create a model named 
 Step3
 Create a package named network in your main package
 in this package create an interface named ApiService containing the access to api
-
+```kotlin
 interface ApiService{
    
     @GET("pokemon")
     suspend fun  getAllPokemon():List<PockemonsItem>
 }
+```kotlin
 
-in the same file add the BASE_URL and the retrofit instance 
+in the same file add the BASE_URL and the retrofit instance
+```kotlin
+
 private var BASE_URL="https://tyradex.tech/api/v1/"
-
 private val retrofit = Retrofit.Builder()
     .addConverterFactory(Json.asConverterFactory("application/json".toMediaType()))
     .baseUrl(BASE_URL)
     .build()
-add also the singleton that instantiate the singleton retrofit in the same package network
+```kotlin
 
+add also the singleton that instantiate the singleton retrofit in the same package network
+```kotlin
 object PockApi {
     val retrofitService: ApiService by lazy {
         retrofit.create(ApiService::class.java)
     }}
+```kotlin
 
 step3
 
@@ -55,13 +62,16 @@ create a package named viewmodel in witch create a file named ViewModel.kt
 
 
 declare Sealed Class PockUiState
+```kotlin
 sealed interface PockUiState {
     data class Success(val pokemons: List<PockemonsItem>) : PockUiState
     object Error : PockUiState
     object Loading : PockUiState
 }
-create the class ViewModel and the method getAllPockemons and declare state variable pockUIState
+```kotlin
 
+create the class ViewModel and the method getAllPockemons and declare state variable pockUIState
+```kotlin
 class ViewModel:ViewModel() {
     /** The mutable State that stores the status of the most recent request */
     var pockUiState: PockUiState by mutableStateOf(PockUiState.Loading)
@@ -90,12 +100,13 @@ class ViewModel:ViewModel() {
         }
     }
 }
+```kotlin
 
 Step 4 
 
 create package view, in witch create Home Screens Composable that use viewmodel to display the list of pokemons , error if error and loading if loading
+```kotlin
 @Composable
-
 fun HomeScreen(
     pokUiState: PockUiState,
     modifier: Modifier = Modifier,
@@ -109,10 +120,12 @@ fun HomeScreen(
         is PockUiState.Error -> ErrorScreen( modifier = modifier.fillMaxSize())
     }
 }
+```kotlin
 
 /**
  * The home screen displaying the loading message.
  */
+```kotlin
 @Composable
 fun LoadingScreen(modifier: Modifier = Modifier) {
     Image(
@@ -189,10 +202,11 @@ fun PockPhotoCard(pockemon: PockemonsItem, modifier: Modifier = Modifier) {
         )
     }
 }
+```kotlin
+
 step
-
 Prepare the Composable PokApp that contain the main composable of the app
-
+```kotlin
 @Composable
 fun PokApp() {
     val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior()
@@ -226,12 +240,13 @@ fun PokTopAppBar(scrollBehavior: TopAppBarScrollBehavior, modifier: Modifier = M
         modifier = modifier
     )
 }
+```kotlin
 
 step
 
 call your Pokapp in your main activity
 
-
+```kotlin
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -244,3 +259,5 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+```kotlin
+
