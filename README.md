@@ -52,7 +52,7 @@ object PockApi {
     }}
 ```
 
-# step 4
+# Step 4
 
 create a package named viewmodel in witch create a file named ViewModel.kt
 declare Sealed Class PockUiState
@@ -196,7 +196,7 @@ fun PockPhotoCard(pockemon: PockemonsItem, modifier: Modifier = Modifier) {
 }
 ```
 
-# step 6
+# Step 6
 Prepare the Composable PokApp that contain the main composable of the app
 ```kotlin
 @Composable
