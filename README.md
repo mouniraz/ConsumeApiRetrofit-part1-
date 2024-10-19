@@ -234,8 +234,7 @@ fun PokTopAppBar(scrollBehavior: TopAppBarScrollBehavior, modifier: Modifier = M
 }
 ```
 
-step
-
+# Step
 call your Pokapp in your main activity
 
 ```kotlin
