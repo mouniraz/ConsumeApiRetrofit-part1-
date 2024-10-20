@@ -14,7 +14,7 @@ implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-convert
 implementation("com.squareup.retrofit2:retrofit:2.9.0")
 implementation ("com.google.code.gson:gson:2.11.0")
 ```
-> retrofit2-kotlinx-serialization-converter**: A converter for Retrofit to use Kotlinx Serialization.
+> __retrofit2-kotlinx-serialization-converter__: A converter for Retrofit to use Kotlinx Serialization.
 
 > retrofit: A type-safe HTTP client for making API requests.
 
