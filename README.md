@@ -69,6 +69,8 @@ object PockApi {
         retrofit.create(ApiService::class.java)
     }}
 ```
+> The ApiService interface defines HTTP requests for your API, including methods for GET, POST, Each method is annotated with HTTP verbs (like @GET, @POST), and the > response type is often wrapped in Suspend function (using Kotlin coroutines). The Retrofit instance converts these interface methods into real network calls.
+
 
 # Step 4
 
