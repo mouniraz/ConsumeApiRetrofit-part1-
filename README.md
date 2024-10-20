@@ -16,9 +16,9 @@ implementation ("com.google.code.gson:gson:2.11.0")
 ```
 > __retrofit2-kotlinx-serialization-converter__: A converter for Retrofit to use Kotlinx Serialization.
 
-> retrofit: A type-safe HTTP client for making API requests.
+> __retrofit__: A type-safe HTTP client for making API requests.
 
-> gson: A library for converting Java objects to/from JSON.
+> __gson__: A library for converting Java objects to/from JSON.
 Add coil and serialization dependency
 ```kotlin
 // Coil
