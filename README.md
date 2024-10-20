@@ -38,7 +38,7 @@ Add a package named model under your main package, in this create a model named 
   <li>In the search bar, type POJO Generator or POJO Plugin.
  <li> Click Install next to the plugin by Vasiliy (or another POJO generator you prefer).
   <li>After installation, click Restart IDE to activate the plugin.</li>
-> __2. Using the POJO Plugin__
+> <b>2. Using the POJO Plugin</b>
   <li>Open the Java/Kotlin file where you want to generate your POJO.
   <li>Select or copy the JSON data that you want to generate POJO classes from.
   <li>Right-click inside the file, then choose POJO Generator (or the relevant context menu for your plugin).
