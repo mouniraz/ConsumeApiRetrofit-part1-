@@ -30,18 +30,18 @@ implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
 > __kotlinx-serialization-json__: A Kotlin library for serializing and deserializing JSON data using Kotlinx Serialization.
 # Step 2 
 Add a package named model under your main package, in this create a model named Pockemon.kt using POJO Pluguin (install it if it is not installed)
-> 1. Install the POJO Plugin
-  Open Android Studio.
-  Go to File > Settings (on macOS: Android Studio > Preferences).
-  In the left sidebar, select Plugins.
-  Click the Marketplace tab.
-  In the search bar, type POJO Generator or POJO Plugin.
-  Click Install next to the plugin by Vasiliy (or another POJO generator you prefer).
-  After installation, click Restart IDE to activate the plugin.
-> 2. Using the POJO Plugin
-  Open the Java/Kotlin file where you want to generate your POJO.
-  Select or copy the JSON data that you want to generate POJO classes from.
-  Right-click inside the file, then choose POJO Generator (or the relevant context menu for your plugin).
+> __1. Install the POJO Plugin__
+  <li>Open Android Studio.
+  <li>Go to File > Settings (on macOS: Android Studio > Preferences).
+  <li>In the left sidebar, select Plugins.
+  <li>Click the Marketplace tab.
+  <li>In the search bar, type POJO Generator or POJO Plugin.
+ <li> Click Install next to the plugin by Vasiliy (or another POJO generator you prefer).
+  <li>After installation, click Restart IDE to activate the plugin.
+> __2. Using the POJO Plugin__
+  <li>Open the Java/Kotlin file where you want to generate your POJO.
+  <li>Select or copy the JSON data that you want to generate POJO classes from.
+  <li>Right-click inside the file, then choose POJO Generator (or the relevant context menu for your plugin).
 
 # Step 3
 Create a package named network in your main package
