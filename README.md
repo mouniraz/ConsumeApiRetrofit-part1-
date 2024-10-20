@@ -114,6 +114,8 @@ class ViewModel:ViewModel() {
     }
 }
 ```
+> The ViewModel is responsible for requesting data from the API using retrofit. It holds the data for the UI, ensuring that it survives configuration changes (like screen rotations). The data retrieved from the API is stored in LiveData or StateFlow, allowing it to be observed by the UI.
+
 
 # Step 5 
 
