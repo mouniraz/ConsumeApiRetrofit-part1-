@@ -26,9 +26,22 @@ implementation("io.coil-kt:coil-compose:2.4.0")
 //Serialization
 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
 ```
-
+> __coil-compose__: An image loading library for Jetpack Compose, allowing easy image loading and caching in Android apps.
+> __kotlinx-serialization-json__: A Kotlin library for serializing and deserializing JSON data using Kotlinx Serialization.
 # Step 2 
 Add a package named model under your main package, in this create a model named Pockemon.kt using POJO Pluguin (install it if it is not installed)
+> 1. Install the POJO Plugin
+  Open Android Studio.
+  Go to File > Settings (on macOS: Android Studio > Preferences).
+  In the left sidebar, select Plugins.
+  Click the Marketplace tab.
+  In the search bar, type POJO Generator or POJO Plugin.
+  Click Install next to the plugin by Vasiliy (or another POJO generator you prefer).
+  After installation, click Restart IDE to activate the plugin.
+> 2. Using the POJO Plugin
+  Open the Java/Kotlin file where you want to generate your POJO.
+  Select or copy the JSON data that you want to generate POJO classes from.
+  Right-click inside the file, then choose POJO Generator (or the relevant context menu for your plugin).
 
 # Step 3
 Create a package named network in your main package
