@@ -14,9 +14,9 @@ implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-convert
 implementation("com.squareup.retrofit2:retrofit:2.9.0")
 implementation ("com.google.code.gson:gson:2.11.0")
 ```
-<li> retrofit2-kotlinx-serialization-converter: A converter for Retrofit to use Kotlinx Serialization.
+<li> ** retrofit2-kotlinx-serialization-converter**: A converter for Retrofit to use Kotlinx Serialization.
 
-<li> retrofit: A type-safe HTTP client for making API requests.
+<li> ** retrofit**: A type-safe HTTP client for making API requests.
 
 <li> gson: A library for converting Java objects to/from JSON.
 Add coil and serialization dependency
