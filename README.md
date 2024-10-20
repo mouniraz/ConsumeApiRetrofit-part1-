@@ -217,7 +217,7 @@ fun PockPhotoCard(pockemon: PockemonsItem, modifier: Modifier = Modifier) {
     }
 }
 ```
-
+> the View (usually an Activity or Composable) is responsible for displaying the data and handling user interactions, while the ViewModel interacts with the data and API (like Retrofit). Here’s the specific role of the View when using Retrofit with a ViewModel is to get data. 
 # Step 6
 Prepare the Composable PokApp that contain the main composable of the app
 ```kotlin
