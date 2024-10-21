@@ -34,7 +34,7 @@ implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
 ```
 # Step 2 
-Add a package named model under your main package, in this create a model named Pockemon.kt using POJO Pluguin (install it if it is not installed)
+Add a package named model under your main package, in this create a model named Pokemon.kt using POJO Pluguin (install it if it is not installed)
 > __1. Install the POJO Plugin__
   <li>Open Android Studio.
   <li>Go to File > Settings (on macOS: Android Studio > Preferences).
@@ -54,7 +54,7 @@ in this package create an interface named ApiService containing the access to ap
 ```kotlin
 interface ApiService{
   @GET("pokemon")
-    suspend fun  getAllPokemon():List<PockemonsItem>
+    suspend fun  getAllPokemon():List<Pokemon>
 }
 ```
 
