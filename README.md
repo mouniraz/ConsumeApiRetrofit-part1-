@@ -28,6 +28,11 @@ implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
 ```
 > __coil-compose__: An image loading library for Jetpack Compose, allowing easy image loading and caching in Android apps.
 > __kotlinx-serialization-json__: A Kotlin library for serializing and deserializing JSON data using Kotlinx Serialization.
+```kotlin
+ //Lifecycle
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
+```
 # Step 2 
 Add a package named model under your main package, in this create a model named Pockemon.kt using POJO Pluguin (install it if it is not installed)
 > __1. Install the POJO Plugin__
