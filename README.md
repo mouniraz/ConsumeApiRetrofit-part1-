@@ -83,15 +83,15 @@ declare Sealed Class PockUiState
 
 ```kotlin
 sealed interface PockUiState {
-    data class Success(val pokemons: List<PockemonsItem>) : PockUiState
+    data class Success(val pokemons: List<Pokemon>) : PockUiState
     object Error : PockUiState
     object Loading : PockUiState
 }
 ```
 
-create the class ViewModel and the method getAllPockemons and declare state variable pockUIState
+create the class PokViewModel and the method getAllPockemons and declare state variable pockUIState
 ```kotlin
-class ViewModel:ViewModel() {
+class PokViewModel:ViewModel() {
     /** The mutable State that stores the status of the most recent request */
     var pockUiState: PockUiState by mutableStateOf(PockUiState.Loading)
         private set
@@ -177,7 +177,7 @@ fun ErrorScreen(modifier: Modifier = Modifier) {
 
 @Composable
 fun PhotosGridScreen(
-    pockemons: List<PockemonsItem?>?,
+    pockemons: List<Pokemon?>?,
     modifier: Modifier = Modifier,
     contentPadding: PaddingValues = PaddingValues(0.dp),
 ) {
