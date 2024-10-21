@@ -60,9 +60,8 @@ interface ApiService{
 
 in the same file add the BASE_URL and the retrofit instance
 ```kotlin
-private var BASE_URL="https://tyradex.tech/api/v1/"
-private val retrofit = Retrofit.Builder()
-    .addConverterFactory(Json.asConverterFactory("application/json".toMediaType()))
+private val retrofit: Retrofit = Retrofit.Builder()
+    .addConverterFactory(GsonConverterFactory.create()) // For JSON parsing
     .baseUrl(BASE_URL)
     .build()
 ```
