@@ -203,7 +203,7 @@ fun PhotosGridScreen(
 }
 
 @Composable
-fun PockPhotoCard(pockemon: PockemonsItem, modifier: Modifier = Modifier) {
+fun PockPhotoCard(pockemon: Pokemon, modifier: Modifier = Modifier) {
     Card(
         modifier = modifier,
         shape = MaterialTheme.shapes.medium,
